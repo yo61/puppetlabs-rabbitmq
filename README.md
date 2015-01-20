@@ -434,20 +434,6 @@ rabbitmq_federation_upstreamset { 'myupstreamset':
 }
 ```
 
-###rabbitmq\_policy 
-
-`vhost`, `definition` and `pattern` are required. `definition` must be a non-empty Hash. Other parameters default to the values shown in the example if not provided.
-
-```puppet
-rabbitmq_policy { 'mypolicy':
-  vhost      => 'myhost',
-  definition => {'federation-upstream' => 'myfederationupstream'},
-  pattern    => '^.*$',
-  apply_to   => 'all',
-  priority   => 0,
-}
-```
-
 ###rabbitmq\_parameter 
 
 The resource title is parsed as '`vhost` `component` `name`'. All three are required. `value` is also required and must be a non-empty Hash.
